@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sebastian Kałuża</title>
+    <meta name="author" content="Sebastian Kałuża">
+    <link rel="stylesheet" href="main.css">
+
+        <!--czcionka-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <!--Fontello-->
+                <link rel="stylesheet" href="fontello-7d760594/css/fontello.css">
+                
+                <!--
+                ## Typicons
+
+                (c) Stephen Hutchings 2012
+
+                Author:    Stephen Hutchings
+                License:   SIL (http://scripts.sil.org/OFL)
+                Homepage:  http://typicons.com/
+
+                -->
+</head>
+<body onload="startTime()">
+    <div id="container">
+        <nav>
+            <div id="myname"><h2>Sebastian Kałuża</h2></div>
+            <div id="zegar"><h2>12:00:00</h2></div>
+        </nav>
+        <main>
+            <article>
+                <p>Cześć! Nazywam się Sebastian Kałuża i jestem studentem informatyki. Moje zainteresowania skupiają się głównie na programowaniu aplikacji webowych oraz komputerowych. W szczególności interesuję się językami programowania takimi jak C++, PHP i Java, które wykorzystuję do tworzenia innowacyjnych rozwiązań. Próbuję również swoich sił w tworzeniu gier komputerowych.</p>
+                <p>Posiadam doświadczenie w serwisowaniu urządzeń, diagnostyce oraz naprawie, co pozwala mi na kompleksowe podejście do problemów technicznych.</p>
+                <p>Hobbystycznie interesuję się muzyką i fotografią, co pozwala mi na wyrażanie swojej kreatywności w różnych formach.</p>  
+                <p>Zapraszam do zapoznania się z moją stroną, gdzie dzielę się swoimi projektami, przemyśleniami i pasją do informatyki.</p>
+            </article>
+            <aside>
+                <img src="MyAvatar900x1300.png" width="350px" alt="Mój awatar Xbox" >
+            </aside>
+        </main>
+        <section>
+            <div id="findme"><h2>Znajdź mnie w sieci</h2></div>
+            <div id="socialtiles">
+                <a href="https://github.com/TurboSebo"><div class="socialsquare" id="github-square"><i class="icon-github"></i></div></a> 
+                <a href="https://www.linkedin.com/in/s3bastiank/" target="_blank"><div class="socialsquare" id="linkedin-square"><i class="icon-linkedin"></i></div></a>
+                <a href="#"><div class="socialsquare" id="twitter-square"><i class="icon-twitter"></i></div></a>
+                <a href="https://www.instagram.com/turbosebo/"><div class="socialsquare" id="instagram-square"><i class="icon-camera-outline"></i></div></a>
+            </div>
+        </section>
+        <footer>
+            <p>Stronę wykonał: Sebastian Kałuża &copy; 2024</p>
+        </footer>
+    </div>
+</body>
+
+<script>
+    function startTime() {
+      const today = new Date();
+      let h = today.getHours();
+      let m = today.getMinutes();
+      let s = today.getSeconds();
+      m = checkTime(m);
+      s = checkTime(s);
+      if (h==21 && m==37) document.getElementById('zegar').innerHTML = "<h2 style=\"color: yellow;\">" +  h + ":" + m + ":" + s + "</h2>";
+      else document.getElementById('zegar').innerHTML = "<h2>" +  h + ":" + m + ":" + s + "</h2>";
+      setTimeout(startTime, 1000);
+    }
+    
+    function checkTime(i) {
+      if (i < 10) {i = "0" + i};
+      return i;
+    }
+    
+</script>
+
+</html>

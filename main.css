@@ -1,0 +1,142 @@
+#container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+body{
+    background-color: #272727;
+    color:#F6F7F5;
+
+    margin: 0;
+    padding: 0;
+
+    /* czcionka 
+    // <uniquifier>: Use a unique and descriptive class name
+    // <weight>: Use a value from 100 to 900 */
+
+    font-family: "Asap", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.8em;
+}
+main{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
+}
+article{
+    width: 70%;
+    padding: 0 3%;
+}
+aside > img{
+    max-width: 350px;
+    height: auto;
+}
+@media (max-width: 880px) { 
+    article { 
+        width: 90%; 
+    }
+    main { 
+        flex-direction: column; 
+    } 
+    aside { 
+        margin-top: 20px;
+    }
+}
+nav{
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3%;
+    background-color: #333333;
+    color: white;
+}
+
+@media (max-width: 500px) { 
+    #zegar { 
+        display: none; 
+    } 
+    #myname {
+         text-align: center; 
+        } 
+}
+
+
+/* sekcja social media */
+section{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: #393939;
+}
+#socialtiles{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0.5em;
+    border-radius: 0.8em;
+    padding: 0.8em;
+}
+.socialsquare{
+    display: flex;
+    /*background-color: red; */
+    width: 150px;
+    height: 150px;
+    border-radius: 0.5em;
+    color: #F6F7F5;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+}
+#twitter-square{
+    background-color: #08a0e9;
+}
+#twitter-square:hover{
+    background-color: #0090d9;
+}
+
+#linkedin-square{
+    background-color: #0e76a8;
+}#linkedin-square:hover{
+    background-color: #0a648d;
+}
+#mastodon-square{
+    background-color: #4487D4;
+}#mastodon-square:hover{
+    background-color: #3477c4;
+}
+#github-square{
+    background-color: #3E75C3;
+}#github-square:hover{
+    background-color: #2E65B3;
+}
+#instagram-square{
+    background-color: #C13584;
+}#instagram-square:hover{
+    background-color: #B12574;
+}
+
+/* koniec sekcji social media */
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #A9A9A9;
+}
